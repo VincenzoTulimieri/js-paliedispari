@@ -19,5 +19,5 @@ Dichiariamo chi ha vinto.
 - sommare i 2 numeri
     - somma userNumber + cpuNumber
 - verificare che la somma sia pari o dispari 
-    - usare finzione con modulo 
+    - usare funzione con modulo 
 - stampare il risultato e l'automatico vincitore
