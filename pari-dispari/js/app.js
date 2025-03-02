@@ -3,34 +3,63 @@ console.log('ciao vincenzo')
 
 
 let adjectiveNumber = prompt('Inserisci se secondo te il numero è pari o e dispari');
-let userNumber= parseInt(prompt('Inserisci il tuo numero'));
+let userNumber = parseInt(prompt('Inserisci il tuo numero'));
 
-function cpuNumber(){
-   let number = Math.floor(Math.random() * 5) +1;
+
+const isNumberValid = !isNaN(userNumber) && userNumber >= 1 && userNumber <= 5;
+let isAdjectiveValid = isNaN(adjectiveNumber) && validAdjective();
+
+
+function validAdjective() {
+    const adjective = ['pari', 'dispari']
+
+    if (adjectiveNumber = adjective[0]) {
+
+    } else if (adjectiveNumber = adjective[1]) {
+
+    }
+    return true
+}
+function cpuNumber() {
+    let number = Math.floor(Math.random() * 5) + 1;
     return number
 }
 
 
-cpuNumber();
-console.log(cpuNumber())
+
+if (isNumberValid && isAdjectiveValid) {
+
+    console.log(adjectiveNumber)
+    console.log(userNumber)
+
+    cpuNumber();
+    console.log(cpuNumber())
+
+    // somma dei numeri
+    let sumNumber = userNumber + cpuNumber()
+    console.log(sumNumber)
 
 
+    function adjectiveSum() {
+        let qualitaNumero = sumNumber
+        if (qualitaNumero % 2 === 0) {
 
-// somma dei numeri
-let sumNumber = userNumber + cpuNumber()
-console.log(sumNumber)
+        } else if (qualitaNumero % 2 !== 0) {
 
-
-function adjectiveSum(){
-    let qualitaNumero = sumNumber
-    if(qualitaNumero % 2 === 0){
-        console.log('è pari hai vinto')
-    }else if(qualitaNumero % 2 !== 0){
-        console.log('è dispari hai vinto')
+        }
+        return qualitaNumero
     }
-    return qualitaNumero
+
+
+    
+    adjectiveSum()
+    
+
+
+} else {
+    console.log('i valori inseriti non sono validi')
 }
-adjectiveSum()
+
 
 // let result = adjectiveSum()
 // console.log(adjectiveSum())
