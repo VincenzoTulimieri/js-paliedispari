@@ -1,5 +1,4 @@
 
-
 // l'utente sceglie pari o dispari
 const adjectiveNumber = prompt('Inserisci se secondo te il numero è pari o e dispari');
 const isAdjectiveValid = adjectiveNumber === 'pari' || adjectiveNumber === 'dispari';
@@ -17,35 +16,41 @@ if (isAdjectiveValid) {
 
         // generazione numero cpu
         let cpuNumber = number()
-        console.log(cpuNumber)
+        
 
         // somma dei numeri
         let sumNumber = userNumber + cpuNumber
-        console.log(sumNumber)
-
+        
+        // verifica se il numero è pari o dispari 
         let result = adjectiveSum(sumNumber)
-        console.log(result)
-
+        
+        //stampa del risultato
         if(adjectiveNumber === result){
-            console.log('hai vinto')
-        }else if(adjectiveNumber !== result){
-            console.log('hai perso')
+            console.log(`Complimenti il numero che è uscito è ${sumNumber}, Hai vinto`)
+        }else{
+            console.log(`Mi dispiace il numero che è uscito è ${sumNumber}, Hai perso`)
         } 
 
     } else{
-        console.log('il numero inserito non è corretto')
+        console.log('Il numero inserito non è corretto, Riprova')
     }
 
 
 } else {
-    console.log('i valori inseriti non sono validi')
+    console.log('I valori inseriti non sono validi, Riprova')
 }
+
+// Fuction
 
 function number() {
     return Math.floor(Math.random() * 5) + 1;
 }
 
 function adjectiveSum(sum) {
-    return sum % 2 === 0
+    if(sum % 2 === 0){
+        return 'pari'
+    }else if(sum % 2 !== 0){
+        return 'dispari'
+    }
 }
 
